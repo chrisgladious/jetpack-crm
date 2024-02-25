@@ -1684,6 +1684,8 @@ function jpcrm_get_mimetype( $file_path ) {
 		'7b5c727466'           => 'application/rtf', // RTF
 		'7b5c616e7369'         => 'application/rtf', // RTF (Another variant)
 		'efbbbf'               => 'text/plain', // TXT with UTF-8 BOM
+		'feff'		       => 'text/csv UTF-16', // BOM in the contacts export from Jetpack crm
+		'efbbbf3c'	       => 'text/csv (WSF Windows Script Component (UTF-8))', //This BOM is added by Excel 2021 when saved as CSV UTF-8 (Comma delimited) (*csv). Name 'WSF Windows Script Component (UTF-8)' is taken from https://www.garykessler.net/library/file_sigs.html
 		'5a4d'                 => 'application/x-dosexec', // EXE
 		'2321'                 => 'application/x-sh', // Unix Shell Script
 		'2521'                 => 'application/eps', // EPS
