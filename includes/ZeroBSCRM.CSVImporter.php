@@ -170,7 +170,7 @@ function jpcrm_csvimporter_lite_preflight_checks( $stage ) {
 		}
 
 		// verify file extension and MIME
-		if ( ! jpcrm_file_check_mime_extension( $csv_file_data, '.csv', array( 'text/csv', 'text/plain', 'application/csv' ) ) ) {
+		if ( ! jpcrm_file_check_mime_extension( $csv_file_data, '.csv', array( 'text/csv', 'text/plain', 'application/csv', 'text/csv UTF-16', 'text/csv (WSF Windows Script Component (UTF-8))'  ) ) ) { //2024-02-25: ChrisGladius added : 'text/csv UTF-16', 'text/csv (WSF Windows Script Component (UTF-8))'
 			throw new Exception( __( 'Your file is not a correctly-formatted CSV file. Please check your file format. If you continue to have issues please contact support.', 'zero-bs-crm' ) );
 		}
 
